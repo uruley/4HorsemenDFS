@@ -1,0 +1,15 @@
+QB:
+  required_features: [fp_avg_3, passing_yards_avg]
+  scaler: standard
+RB:
+  required_features: [fp_avg_3, rush_yards_avg]
+  scaler: standard
+WR:
+  required_features: [fp_avg_3, targets_avg]
+  scaler: standard
+TE:
+  required_features: [fp_avg_3, targets_avg]
+  scaler: standard
+DST:
+  required_features: [sacks_avg, takeaways_avg, opp_points_allowed, opp_sacks_allowed]
+  scaler: none

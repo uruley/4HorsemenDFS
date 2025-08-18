@@ -1,0 +1,35 @@
+# Core dependencies for 4 Horsemen DFS Optimizer
+# TODO: Add specific version requirements as needed
+
+# Data processing
+pandas
+
+# Web framework
+Flask>=2.0.0
+
+# Data processing
+numpy>=1.21.0
+
+# Machine learning
+scikit-learn>=1.0.0
+
+# Data validation
+pydantic>=1.8.0
+
+# Configuration management
+PyYAML>=6.0
+
+# HTTP requests
+requests>=2.25.0
+
+# Development and testing
+pytest>=6.0.0
+black>=21.0.0
+flake8>=3.9.0
+
+# Optional: Advanced optimization
+pulp>=2.5.0
+cvxpy>=1.1.0
+
+# NFL data
+nfl_data_py

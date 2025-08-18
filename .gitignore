@@ -1,0 +1,21 @@
+﻿# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Outputs / generated
+normalized_dk.csv
+projections.csv
+lineups.csv
+validation_report.json
+
+# Models (do NOT commit)
+models/*.pkl
+
+# Frontend
+frontend/node_modules/

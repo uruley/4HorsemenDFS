@@ -1,0 +1,22 @@
+{
+  "name": "4horsemen-dfs-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for 4 Horsemen DFS Optimizer",
+  "main": "index.js",
+  "scripts": {
+    "start": "TODO: Add start script",
+    "build": "TODO: Add build script",
+    "test": "TODO: Add test script"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "keywords": ["dfs", "optimizer", "fantasy", "sports"],
+  "author": "4 Horsemen DFS",
+  "license": "MIT"
+}
