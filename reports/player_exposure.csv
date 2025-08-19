@@ -1,39 +1,44 @@
 name,pos,team,exposure_count,exposure_pct
 Ja'Marr Chase,WR,CIN,8,40.0
-Bijan Robinson,RB,ATL,8,40.0
-Tetairoa McMillan,WR,CAR,8,40.0
-Jaylen Waddle,WR,MIA,8,40.0
-Eric Saubert,TE,SEA,8,40.0
-Drew Ogletree,TE,IND,8,40.0
 Courtland Sutton,WR,DEN,8,40.0
-Tyler Allgeier,RB,ATL,8,40.0
-Zach Wilson,QB,MIA,8,40.0
-Malik Nabers,WR,NYG,8,40.0
 Jordan Waters,RB,LAR,8,40.0
-Puka Nacua,WR,LAR,8,40.0
-Jahmyr Gibbs,RB,DET,8,40.0
+Zach Wilson,QB,MIA,8,40.0
+Tyler Allgeier,RB,ATL,8,40.0
+Bijan Robinson,RB,ATL,8,40.0
 Kaleb Johnson,RB,PIT,8,40.0
-Kyler Murray,QB,ARI,6,30.0
-Josh Jacobs,RB,GB,6,30.0
-Marvin Harrison Jr.,WR,ARI,6,30.0
-Rhamondre Stevenson,RB,NE,6,30.0
-Commanders,DST,WAS,4,20.0
-Cardinals,DST,ARI,4,20.0
-Bucky Irving,RB,TB,4,20.0
-Nico Collins,WR,HOU,4,20.0
-DK Metcalf,WR,PIT,3,15.0
-Trey McBride,TE,ARI,3,15.0
-Broncos,DST,DEN,3,15.0
-Bryce Young,QB,CAR,3,15.0
-Steelers,DST,PIT,2,10.0
-Bo Nix,QB,DEN,2,10.0
-Jaguars,DST,JAX,2,10.0
+Jaylen Waddle,WR,MIA,8,40.0
+Tetairoa McMillan,WR,CAR,8,40.0
+Puka Nacua,WR,LAR,8,40.0
+Josh Jacobs,RB,GB,8,40.0
+Jahmyr Gibbs,RB,DET,8,40.0
+Malik Nabers,WR,NYG,8,40.0
+Eric Saubert,TE,SEA,8,40.0
+Broncos,DST,DEN,7,35.0
+Drew Ogletree,TE,IND,6,30.0
+Marvin Harrison Jr.,WR,ARI,5,25.0
+Trey McBride,TE,ARI,5,25.0
+Rhamondre Stevenson,RB,NE,4,20.0
+Bo Nix,QB,DEN,3,15.0
+Kyler Murray,QB,ARI,3,15.0
+Cardinals,DST,ARI,3,15.0
+Cooper Kupp,WR,SEA,3,15.0
+Bucky Irving,RB,TB,3,15.0
+Nico Collins,WR,HOU,3,15.0
+Commanders,DST,WAS,3,15.0
 Bengals,DST,CIN,2,10.0
-Buccaneers,DST,TB,1,5.0
-Cooper Kupp,WR,SEA,1,5.0
-Rams,DST,LAR,1,5.0
+Michael Carter,RB,ARI,2,10.0
+Bryce Young,QB,CAR,2,10.0
+DK Metcalf,WR,PIT,1,5.0
 Troy Hairston,RB,CLE,1,5.0
+Jermar Jefferson,RB,TEN,1,5.0
+Jarrett Stidham,QB,DEN,1,5.0
+Dylan Sampson,RB,CLE,1,5.0
 Sam LaPorta,TE,DET,1,5.0
-Nick Chubb,RB,HOU,1,5.0
+Russell Wilson,QB,NYG,1,5.0
+C.J. Stroud,QB,HOU,1,5.0
+Steelers,DST,PIT,1,5.0
+Jaguars,DST,JAX,1,5.0
+49ers,DST,SF,1,5.0
+Packers,DST,GB,1,5.0
+Colts,DST,IND,1,5.0
 Matthew Stafford,QB,LAR,1,5.0
-Texans,DST,HOU,1,5.0
