@@ -26,6 +26,49 @@ from advanced_name_matcher_v2 import AdvancedNameMatcherV2
 ROSTER_REQ = {"QB": 1, "RB": 2, "WR": 3, "TE": 1, "DST": 1}
 FLEX_ELIG = {"RB", "WR", "TE"}
 
+# Team canonicalization for consistent naming
+TEAM_CANON = {
+    "JAC":"JAX","WSH":"WAS","LVR":"LV","OAK":"LV","SD":"LAC","LA":"LAR","STL":"LAR",
+    "ARI":"ARI","TB":"TB","NE":"NE","NO":"NO","NYJ":"NYJ","NYG":"NYG","KC":"KC","SF":"SF",
+    "SEA":"SEA","DAL":"DAL","PHI":"PHI","TEN":"TEN","CHI":"CHI","CIN":"CIN","CLE":"CLE",
+    "BUF":"BUF","MIA":"MIA","BAL":"BAL","PIT":"PIT","HOU":"HOU","IND":"IND","MIN":"MIN",
+    "DET":"DET","ATL":"ATL","CAR":"CAR","GB":"GB","LAC":"LAC","LAR":"LAR","DEN":"DEN",
+    "JAX":"JAX","WAS":"WAS","LV":"LV"
+}
+
+def canon(t: str) -> str:
+    return TEAM_CANON.get((t or "").upper().strip(), (t or "").upper().strip())
+
+def add_opp_from_dk_gameinfo(player_df: pd.DataFrame, dk_path: str = "data/DKSalaries.csv") -> pd.DataFrame:
+    """Extract opponent information from DraftKings Game Info column"""
+    dk = pd.read_csv(dk_path)
+    gi_col = next((c for c in dk.columns if c.lower().replace(" ", "") == "gameinfo"), None)
+    if gi_col is None:
+        if "Game Info" in dk.columns: gi_col = "Game Info"
+    if gi_col is None:
+        return player_df  # DK file has no Game Info; skip
+
+    game_map = {}   # TEAM -> OPP
+    for s in dk[gi_col].dropna().astype(str):
+        token = s.split()[0]  # e.g., "TB@ATL"
+        if "@" not in token: 
+            continue
+        away, home = token.split("@", 1)
+        away, home = canon(away), canon(home)
+        game_map[away] = home
+        game_map[home] = away
+
+    out = player_df.copy()
+    if "team" not in out.columns:
+        out["team"] = ""
+    out["team"] = out["team"].map(canon)
+
+    if "opp" not in out.columns:
+        out["opp"] = "UNK"
+    mask = out["opp"].isna() | (out["opp"].astype(str).str.upper().isin(["", "UNK"]))
+    out.loc[mask, "opp"] = out.loc[mask, "team"].map(game_map).fillna("UNK")
+    return out
+
 def load_dk_salaries(path):
     """Load and normalize DraftKings salary data"""
     print(f"Loading DK salaries from {path}...")
@@ -588,6 +631,11 @@ def main():
     if merged.empty:
         print("Cannot proceed without matched data")
         return
+    
+    # Extract opponent information from DK Game Info
+    merged = add_opp_from_dk_gameinfo(merged, args.salaries)
+    print("\nOpponent information extracted from DK Game Info:")
+    print(merged.loc[merged.pos=="QB", ["name","team","opp"]].head().to_string(index=False))
     
     # Build lineup(s)
     if args.num_lineups > 1:
