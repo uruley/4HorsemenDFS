@@ -6,6 +6,7 @@ pandas
 
 # Web framework
 Flask>=2.0.0
+streamlit>=1.28.0
 
 # Data processing
 numpy>=1.21.0
