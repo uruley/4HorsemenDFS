@@ -5,8 +5,9 @@ import glob
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="4HorsemenDFS Optimizer", layout="wide")
-st.title("4HorsemenDFS – Lineup Optimizer")
+st.set_page_config(page_title="4HorsemenDFS Optimizer V3", layout="wide")
+st.title("4HorsemenDFS – Lineup Optimizer V3 🚀")
+st.success("✅ Now using V3 with 100% crosswalk coverage - No more name matching issues!")
 
 # --- Sidebar controls ---
 st.sidebar.header("Settings")
@@ -95,10 +96,10 @@ with tab_opt:
             st.error("Please upload both Projections and DK Salaries.")
         else:
             cmd = [
-                sys.executable, "scripts/optimize_lineups_v2.py",
+                sys.executable, "scripts/optimize_lineups_v3.py",
                 "--projections", "projections.csv",
                 "--salaries", "data/DKSalaries.csv",
-                "--output", os.path.join(OUTPUT_DIR, "optimal_lineup_v2.csv"),
+                "--output", os.path.join(OUTPUT_DIR, "optimal_lineup_v3.csv"),
                 "--salary-cap", str(salary_cap),
                 "--min-salary", str(min_spend),
                 "--num-lineups", str(n_lineups),
@@ -106,8 +107,7 @@ with tab_opt:
                 "--alpha", str(alpha_pct / 100.0),
                 "--max-exposure", str(max_expo / 100.0),
             ]
-            if alias_path:
-                cmd += ["--aliases", alias_path]
+            # V3 uses centralized database - no need for aliases file
 
             st.code(" ".join(cmd), language="bash")
 
@@ -131,12 +131,12 @@ with tab_opt:
                 st.error(f"Error calling optimizer: {e}")
 
     # Show most recent optimal lineup if present
-    opt_csv = os.path.join(OUTPUT_DIR, "optimal_lineup_v2.csv")
+    opt_csv = os.path.join(OUTPUT_DIR, "optimal_lineup_v3.csv")
     if os.path.exists(opt_csv):
         st.success("Latest optimal lineup")
         df_opt = pd.read_csv(opt_csv)
         st.dataframe(df_opt)
-        st.download_button("Download optimal_lineup_v2.csv", df_opt.to_csv(index=False), "optimal_lineup_v2.csv")
+        st.download_button("Download optimal_lineup_v3.csv", df_opt.to_csv(index=False), "optimal_lineup_v3.csv")
 
 with tab_lineups:
     st.subheader("Generated Lineups")

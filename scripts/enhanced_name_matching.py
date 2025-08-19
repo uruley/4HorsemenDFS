@@ -306,3 +306,4 @@ if __name__ == "__main__":
     print("1. Import this module in optimize_lineups.py")
     print("2. Replace merge_projections_and_salaries with merge_projections_and_salaries_enhanced")
     print("3. Run your optimizer as normal")
+

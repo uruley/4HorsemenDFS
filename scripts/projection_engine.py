@@ -14,15 +14,28 @@ def run(dk_normalized_csv: str, out_csv: str = "projections.csv", report_path: s
     # Build features for all positions at once
     feats_by_pos, issues = build_features(dk)
     
+    # Initialize ModelRegistry for ML predictions
+    registry = ModelRegistry()
+    print(f"🔧 Using ModelRegistry with models: {[pos for pos, model in registry.models.items() if model is not None]}")
+    
     rows = []
     for pos, sub in feats_by_pos.items():
         if sub.empty:
             issues.setdefault("empty_positions", []).append(pos)
             continue
         try:
-            # Get predictions
-            reg = ModelRegistry()
-            yhat = reg.predict(pos, sub)
+            # Use actual ML models for predictions
+            if pos in ['QB', 'RB', 'WR', 'TE']:
+                try:
+                    yhat = registry.predict(pos, sub)
+                    print(f"🔍 {pos} ML predictions: {yhat[:5]}")  # Debug
+                except Exception as model_error:
+                    print(f"⚠️  ML model failed for {pos}, falling back to features: {model_error}")
+                    # Fallback to feature averages if ML fails
+                    yhat = sub['fp_avg_3'].values
+            else:
+                # For DST, use a simple baseline (no ML model available)
+                yhat = [10.0] * len(sub)
             
             # Prepare output row
             tmp = sub[['name','pos','team','opp','is_home','salary','game_date']].copy()

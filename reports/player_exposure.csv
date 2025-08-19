@@ -1,41 +1,39 @@
 name,pos,team,exposure_count,exposure_pct
 Ja'Marr Chase,WR,CIN,8,40.0
-Tee Higgins,WR,CIN,8,40.0
-Tay Martin,WR,WAS,8,40.0
-Taysom Hill,TE,NO,8,40.0
-Jimmy Garoppolo,QB,LAR,8,40.0
-Chris Godwin,WR,TB,8,40.0
-Davante Adams,WR,LAR,8,40.0
-Joe Mixon,RB,HOU,8,40.0
-Alvin Kamara,RB,NO,8,40.0
-Texans,DST,HOU,8,40.0
+Bijan Robinson,RB,ATL,8,40.0
+Tetairoa McMillan,WR,CAR,8,40.0
+Jaylen Waddle,WR,MIA,8,40.0
+Eric Saubert,TE,SEA,8,40.0
+Drew Ogletree,TE,IND,8,40.0
+Courtland Sutton,WR,DEN,8,40.0
+Tyler Allgeier,RB,ATL,8,40.0
+Zach Wilson,QB,MIA,8,40.0
+Malik Nabers,WR,NYG,8,40.0
+Jordan Waters,RB,LAR,8,40.0
+Puka Nacua,WR,LAR,8,40.0
 Jahmyr Gibbs,RB,DET,8,40.0
-Joe Burrow,QB,CIN,7,35.0
-Jonathan Taylor,RB,IND,6,30.0
-Broncos,DST,DEN,6,30.0
-Amon-Ra St. Brown,WR,DET,6,30.0
-Adam Thielen,WR,CAR,6,30.0
-Tyler Higbee,TE,LAR,5,25.0
-Mike Evans,WR,TB,5,25.0
-Baker Mayfield,QB,TB,4,20.0
-George Kittle,TE,SF,4,20.0
-Seahawks,DST,SEA,4,20.0
-Jakobi Meyers,WR,LV,4,20.0
-Kenneth Walker III,RB,SEA,4,20.0
-James Conner,RB,ARI,4,20.0
-Chuba Hubbard,RB,CAR,3,15.0
-Malik Nabers,WR,NYG,3,15.0
-Jonnu Smith,TE,PIT,3,15.0
-Josh Downs,WR,IND,2,10.0
-De'Von Achane,RB,MIA,2,10.0
-Michael Carter,RB,ARI,2,10.0
-Stefon Diggs,WR,NE,2,10.0
-Packers,DST,GB,2,10.0
-Jauan Jennings,WR,SF,1,5.0
-Joshua Dobbs,QB,NE,1,5.0
-Bijan Robinson,RB,ATL,1,5.0
-Puka Nacua,WR,LAR,1,5.0
-Terry McLaurin,WR,WAS,1,5.0
-Josh Jacobs,RB,GB,1,5.0
-Kyren Williams,RB,LAR,1,5.0
-David Montgomery,RB,DET,1,5.0
+Kaleb Johnson,RB,PIT,8,40.0
+Kyler Murray,QB,ARI,6,30.0
+Josh Jacobs,RB,GB,6,30.0
+Marvin Harrison Jr.,WR,ARI,6,30.0
+Rhamondre Stevenson,RB,NE,6,30.0
+Commanders,DST,WAS,4,20.0
+Cardinals,DST,ARI,4,20.0
+Bucky Irving,RB,TB,4,20.0
+Nico Collins,WR,HOU,4,20.0
+DK Metcalf,WR,PIT,3,15.0
+Trey McBride,TE,ARI,3,15.0
+Broncos,DST,DEN,3,15.0
+Bryce Young,QB,CAR,3,15.0
+Steelers,DST,PIT,2,10.0
+Bo Nix,QB,DEN,2,10.0
+Jaguars,DST,JAX,2,10.0
+Bengals,DST,CIN,2,10.0
+Buccaneers,DST,TB,1,5.0
+Cooper Kupp,WR,SEA,1,5.0
+Rams,DST,LAR,1,5.0
+Troy Hairston,RB,CLE,1,5.0
+Sam LaPorta,TE,DET,1,5.0
+Nick Chubb,RB,HOU,1,5.0
+Matthew Stafford,QB,LAR,1,5.0
+Texans,DST,HOU,1,5.0
